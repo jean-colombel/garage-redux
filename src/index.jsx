@@ -11,6 +11,7 @@ import { createHistory as history } from 'history';
 // Internal modules
 import '../assets/stylesheets/application.scss';
 import CarsIndex from './containers/cars_index';
+import CarsShow from './containers/cars_show';
 import carsReducer from './reducers/cars_reducer';
 
 // Initital state, reducers and middlwares
@@ -36,6 +37,7 @@ ReactDOM.render(
       <div className="view-container">
         <Switch>
           <Route path="/" exact component={CarsIndex} />
+          <Route path="/cars/:id" component={CarsShow} />
         </Switch>
       </div>
     </Router>
